@@ -1,0 +1,5 @@
+- ps -aux | grep "python script.py" : search for process that are running the script.py
+- kill -9 \<pid-id\>: kill process with pid-id
+- Search for processes that listen to a specific port:
+  - netstat -tulpn | grep :80 (LINUX)
+  - sudo lsof -i tcp:22 (MACOS)
