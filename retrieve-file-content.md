@@ -40,4 +40,4 @@ Explanation:
 * {p=0}: If a line matches the pattern above, set variable p to 0 (false).
 * p: If p is true (i.e., 1), it prints the line.
 
-In case you want the lines that follow hello x, then change [0-9]+ to [0-9&&[^x] and at the first argument change hello 0 to hello x
+In case you want the lines that follow hello x, at the first argument change hello 0 to hello x
