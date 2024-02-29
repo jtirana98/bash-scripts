@@ -1,0 +1,2 @@
+- grep 'text' \<file-name\>: Get a list of the lines that have 'text'
+- 
