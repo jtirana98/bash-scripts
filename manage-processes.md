@@ -1,5 +1,9 @@
-- ps -aux | grep "python script.py" : search for process that are running the script.py
+- ps -aux | grep "python script.py": search for processes that are running the script.py
 - kill -9 \<pid-id\>: kill process with pid-id
 - Search for processes that listen to a specific port:
   - netstat -tulpn | grep :80 (LINUX)
   - sudo lsof -i tcp:22 (MACOS)
+- kill all processes with a specific name pattern:
+  - find them: ps -aux | grep 'epoch 100'| awk '{print $2}' | xargs -n1
+  - kill them   ps -aux | grep 'epoch 100'| awk '{print $2}' | xargs kill -9 $2
+  - note $2 is the pid
