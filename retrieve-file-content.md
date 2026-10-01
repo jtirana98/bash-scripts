@@ -1,8 +1,8 @@
 # Inside a file
 
 - `grep 'text' \<file-name\>: Get a list of the lines that have 'text'`
-- For each file inside the folder print the number of lines that include the 'phrase' text.
-Print it as a list where is line contains: the file's name, Count
+- For each file inside the folder, print the number of lines that include the 'phrase' text.
+Print it as a list where each line contains: the file's name, Count
 ```
 for file in $(ls *.log); do
     count=$(grep -o 'phrase' "$file" | wc -l)
@@ -37,14 +37,15 @@ You can retrieve these lines with the following command:
 Explanation:
 
 * /hello 0/: This pattern matches lines containing "hello 0".
-* {p=1; print; next}: If a line matches the pattern above, set variable p to 1 (true) print line and the next line.
+* {p=1; print; next}: If a line matches the pattern above, set variable p to 1 (true), print line and the next line.
 * /hello[0-9]+/: This pattern matches lines containing "hello" followed by one or more digits.
 * {p=0}: If a line matches the pattern above, set variable p to 0 (false).
 * p: If p is true (i.e., 1), it prints the line.
 
-In case you want the lines that follow hello x, at the first argument change hello 0 to hello x
+If you want the lines that follow hello x, change the first argument from hello 0 to hello x
 
 
 # Inside a folder
 
-- `ls -l  | grep -c ^d` to count the number of files/folders inside a directory
+- `ls -l  | grep -c ^d` to count the number of folders inside a directory (see the regex ^d)
+- `ls -l | grep -c ^-` to count the number of files inside a directory (see the regex ^-)
