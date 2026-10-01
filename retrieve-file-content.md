@@ -1,3 +1,5 @@
+# Inside a file
+
 - `grep 'text' \<file-name\>: Get a list of the lines that have 'text'`
 - For each file inside the folder print the number of lines that include the 'phrase' text.
 Print it as a list where is line contains: the file's name, Count
@@ -41,3 +43,8 @@ Explanation:
 * p: If p is true (i.e., 1), it prints the line.
 
 In case you want the lines that follow hello x, at the first argument change hello 0 to hello x
+
+
+# Inside a folder
+
+- `ls -l  | grep -c ^d` to count the number of files/folders inside a directory
